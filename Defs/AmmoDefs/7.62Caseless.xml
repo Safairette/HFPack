@@ -11,7 +11,7 @@
 	<!-- ==================== AmmoSet ========================== -->
 
 	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_762x265mmCaseless</defName>
+		<defName>AmmoSet_762x26mmCaseless</defName>
 		<label>7.62mm Caseless</label>
 		<ammoTypes>
 			<Ammo_762x26mmCaseless_FMJ>Bullet_762x26mmCaseless_FMJ</Ammo_762x26mmCaseless_FMJ>

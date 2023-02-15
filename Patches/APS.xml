@@ -5,6 +5,7 @@
 			<li>CE: Armor-Piercing Special</li>
 		</mods>
 		<match Class="PatchOperationSequence">
+			<operations>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs</xpath>
 				<value>
@@ -99,6 +100,7 @@
 				</value>
 				
 			</li>
+			</operations>
 		</match>
 	</Operation>
 </Patch>

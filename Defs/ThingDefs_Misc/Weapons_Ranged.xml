@@ -129,7 +129,7 @@
 				<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
 				<warmupTime>0.6</warmupTime>
 				<range>28</range>
-				<soundCast>Light_Suppressed</soundCast>
+				<soundCast>Shot_HFTwo</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 				<ammoConsumedPerShotCount>2</ammoConsumedPerShotCount>
@@ -190,10 +190,11 @@
 				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
 				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 			</li>
+			</tools>
 		<modExtensions>
 			<li Class="CombatExtended.GunDrawExtension">
-				<DrawSize>1.1,1.1</DrawSize>
-				<DrawOffset>0.05,0.05</DrawOffset>
+				<DrawSize>0.9,0.9</DrawSize>
+				<DrawOffset>0,-0.01</DrawOffset>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -398,10 +399,11 @@
 				<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
 				<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
 			</li>
+			</tools>
 		<modExtensions>
 			<li Class="CombatExtended.GunDrawExtension">
-				<DrawSize>1.1,1.1</DrawSize>
-				<DrawOffset>0.05,0.05</DrawOffset>
+				<DrawSize>0.9,0.9</DrawSize>
+				<DrawOffset>0,-0.01</DrawOffset>
 			</li>
 		</modExtensions>
 	</ThingDef>
