@@ -201,7 +201,7 @@
 
 	<!--HFP-C-->
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>HFPack_HFMC</defName>
+		<defName>HFPack_HFPC</defName>
 		<label>HFP-C</label>
 		<description>The charge modification of the HFP-7 machine pistol.\nKnown for its high capacity magazine.</description>
 		<graphicData>
