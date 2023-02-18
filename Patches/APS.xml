@@ -14,7 +14,7 @@
 						<defName>Ammo_762x26mmCaseless_APS</defName>
 						<label>7.62mm Caseless cartridge (AP-S)</label>
 						<graphicData>
-							<texPath>Things/Ammo/Pistol/FMJ</texPath>
+							<texPath>Ammo/APS</texPath>
 							<graphicClass>Graphic_StackCount</graphicClass>
 						</graphicData>
 						<statBases>
@@ -35,11 +35,11 @@
 						</projectile>
 					</ThingDef>
 
-					<RecipeDef ParentName="AmmoRecipeBase">
-						<defName>MakeAmmo_762x26mmCaseless_AP</defName>
-						<label>make 7.62mm Caseless (AP) cartridge x500</label>
-						<description>Craft 500 7.62mm Caseless (AP) cartridges.</description>
-						<jobString>Making 7.62mm Caseless (AP) cartridges.</jobString>
+					<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+						<defName>MakeAmmo_762x26mmCaseless_APS</defName>
+						<label>make 7.62mm Caseless (AP-S) cartridge x500</label>
+						<description>Craft 500 7.62mm Caseless (AP-S) cartridges.</description>
+						<jobString>Making 7.62mm Caseless (AP-S) cartridges.</jobString>
 						<ingredients>
 							<li>
 								<filter>
@@ -91,6 +91,12 @@
 						</projectile>
 					</ThingDef>
 
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x26mmCaseless"]/ammoTypes</xpath>
+				<value>
+					<Ammo_762x26mmCaseless_APS>Bullet_762x26mmCaseless_APS</Ammo_762x26mmCaseless_APS>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
