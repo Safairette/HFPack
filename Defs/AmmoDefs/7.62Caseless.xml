@@ -118,7 +118,7 @@
 		<defName>Bullet_762x26mmCaseless_HP</defName>
 		<label>7.62mm Caseless bullet (HP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>1</damageAmountBase>
+			<damageAmountBase>11</damageAmountBase>
 			<armorPenetrationSharp>2</armorPenetrationSharp>
 			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
 		</projectile>
