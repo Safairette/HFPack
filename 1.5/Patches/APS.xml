@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>CE: Armor-Piercing Special</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<!--7.62mm Caseless-->
+					<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x26mmCaselessBase">
+						<defName>Ammo_762x26mmCaseless_APS</defName>
+						<label>7.62mm Caseless cartridge (AP-S)</label>
+						<graphicData>
+							<texPath>Ammo/APS</texPath>
+							<graphicClass>Graphic_StackCount</graphicClass>
+						</graphicData>
+						<statBases>
+							<MarketValue>0.07</MarketValue>
+						</statBases>
+						<ammoClass>SpecialAP</ammoClass>
+						<cookOffProjectile>Bullet_762x26mmCaseless_APS</cookOffProjectile>
+					</ThingDef>
+
+					<ThingDef ParentName="Base762x26mmCaselessBullet">
+						<defName>Bullet_762x26mmCaseless_APS</defName>
+						<label>7.62mm Caseless bullet (AP-S)</label>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+							<damageAmountBase>5</damageAmountBase>
+							<armorPenetrationSharp>9</armorPenetrationSharp>
+							<armorPenetrationBlunt>8.76</armorPenetrationBlunt>
+							<speed>103</speed>
+						</projectile>
+					</ThingDef>
+
+					<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+						<defName>MakeAmmo_762x26mmCaseless_APS</defName>
+						<label>make 7.62mm Caseless (AP-S) cartridge x500</label>
+						<description>Craft 500 7.62mm Caseless (AP-S) cartridges.</description>
+						<jobString>Making 7.62mm Caseless (AP-S) cartridges.</jobString>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Steel</li>
+									</thingDefs>
+								</filter>
+								<count>11</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Uranium</li>
+									</thingDefs>
+								</filter>
+								<count>2</count>
+							</li>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>Chemfuel</li>
+									</thingDefs>
+								</filter>
+								<count>11</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Steel</li>
+								<li>Uranium</li>
+								<li>Chemfuel</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<Ammo_762x26mmCaseless_APS>500</Ammo_762x26mmCaseless_APS>
+						</products>
+						<workAmount>2880</workAmount>
+					</RecipeDef>
+
+					<!--4.6x30mm Twin-->
+					<ThingDef ParentName="Base46x30mmBullet">
+						<defName>Bullet_46x30mm_APS_Twin</defName>
+						<label>4.6x30mm bullet (AP-S)</label>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+							<damageAmountBase>4</damageAmountBase>
+							<armorPenetrationSharp>13</armorPenetrationSharp>
+							<armorPenetrationBlunt>12.64</armorPenetrationBlunt>
+							<pelletCount>2</pelletCount>
+						</projectile>
+					</ThingDef>
+
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x26mmCaseless"]/ammoTypes</xpath>
+				<value>
+					<Ammo_762x26mmCaseless_APS>Bullet_762x26mmCaseless_APS</Ammo_762x26mmCaseless_APS>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_46x30mm_Twin"]/ammoTypes</xpath>
+				<value>
+					<Ammo_46x30mm_APS>Bullet_46x30mm_APS_Twin</Ammo_46x30mm_APS>
+				</value>
+				
+			</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

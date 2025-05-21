@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== 4.6x30mm ========================== -->
+	<!-- ==================== AmmoSet ========================== -->
+
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_46x30mm_Twin</defName>
+		<label>4.6x30mm</label>
+		<ammoTypes>
+			<Ammo_46x30mm_FMJ>Bullet_46x30mm_FMJ_Twin</Ammo_46x30mm_FMJ>
+			<Ammo_46x30mm_AP>Bullet_46x30mm_AP_Twin</Ammo_46x30mm_AP>
+			<Ammo_46x30mm_HP>Bullet_46x30mm_HP_Twin</Ammo_46x30mm_HP>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="Base46x30mmBullet">
+		<defName>Bullet_46x30mm_FMJ_Twin</defName>
+		<label>4.6x30mm bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationSharp>5</armorPenetrationSharp>
+			<armorPenetrationBlunt>9.72</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base46x30mmBullet">
+		<defName>Bullet_46x30mm_AP_Twin</defName>
+		<label>4.6x30mm bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>9.72</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base46x30mmBullet">
+		<defName>Bullet_46x30mm_HP_Twin</defName>
+		<label>4.6x30mm bullet (HP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>3</armorPenetrationSharp>
+			<armorPenetrationBlunt>9.72</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== 6x18mm Charged ========================== -->
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_6x18mmCharged_Twin</defName>
+    <label>6x18mm Charged</label>
+    <ammoTypes>
+      <Ammo_6x18mmCharged>Bullet_6x18mmCharged_Twin</Ammo_6x18mmCharged>
+      <Ammo_6x18mmCharged_AP>Bullet_6x18mmCharged_AP_Twin</Ammo_6x18mmCharged_AP>
+      <Ammo_6x18mmCharged_Ion>Bullet_6x18mmCharged_Ion_Twin</Ammo_6x18mmCharged_Ion>
+    </ammoTypes>
+    <similarTo>AmmoSet_ChargedPistol</similarTo>
+  </CombatExtended.AmmoSetDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="Base6x18mmChargedBullet">
+    <defName>Bullet_6x18mmCharged_Twin</defName>
+    <label>6x18mm Charged bullet</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>10</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>3</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetrationSharp>12</armorPenetrationSharp>
+      <armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+    </projectile>
+  </ThingDef>
+
+	<ThingDef ParentName="Base6x18mmChargedBullet">
+    <defName>Bullet_6x18mmCharged_AP_Twin</defName>
+    <label>6x18mm Charged bullet (Conc.)</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>8</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>1</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetrationSharp>24</armorPenetrationSharp>
+      <armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+    </projectile>
+  </ThingDef>
+
+	<ThingDef ParentName="Base6x18mmChargedBullet">
+    <defName>Bullet_6x18mmCharged_Ion_Twin</defName>
+    <label>6x18mm Charged bullet (Ion)</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>8</damageAmountBase>
+      <secondaryDamage>
+        <li>
+          <def>EMP</def>
+          <amount>5</amount>
+        </li>
+      </secondaryDamage>
+      <armorPenetrationSharp>18</armorPenetrationSharp>
+      <armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+      <empShieldBreakChance>0.2</empShieldBreakChance>
+			<pelletCount>2</pelletCount>
+    </projectile>
+  </ThingDef>
+
+</Defs>

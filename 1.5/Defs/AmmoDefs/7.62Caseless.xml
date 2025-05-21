@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingCategoryDef>
+		<defName>Ammo762x26mmCaseless</defName>
+		<label>7.62mm Caseless</label>
+		<parent>AmmoPistols</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_762x26mmCaseless</defName>
+		<label>7.62mm Caseless</label>
+		<ammoTypes>
+			<Ammo_762x26mmCaseless_FMJ>Bullet_762x26mmCaseless_FMJ</Ammo_762x26mmCaseless_FMJ>
+			<Ammo_762x26mmCaseless_AP>Bullet_762x26mmCaseless_AP</Ammo_762x26mmCaseless_AP>
+			<Ammo_762x26mmCaseless_HP>Bullet_762x26mmCaseless_HP</Ammo_762x26mmCaseless_HP>
+		</ammoTypes>
+		<similarTo>AmmoSet_Pistol</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="762x26mmCaselessBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>An experimental caseless cartridge, designed to imitate 7.62x25mm Tokarev round.</description>
+		<statBases>
+			<Mass>0.013</Mass>
+			<Bulk>0.01</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo762x26mmCaseless</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x26mmCaselessBase">
+		<defName>Ammo_762x26mmCaseless_FMJ</defName>
+		<label>7.62mm Caseless cartridge (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.07</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_762x26mmCaseless_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x26mmCaselessBase">
+		<defName>Ammo_762x26mmCaseless_AP</defName>
+		<label>7.62mm Caseless cartridge (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.07</MarketValue>
+		</statBases>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>Bullet_762x26mmCaseless_AP</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="762x26mmCaselessBase">
+		<defName>Ammo_762x26mmCaseless_HP</defName>
+		<label>7.62mm Caseless cartridge (HP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/HP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.07</MarketValue>
+		</statBases>
+		<ammoClass>HollowPoint</ammoClass>
+		<cookOffProjectile>Bullet_762x26mmCaseless_HP</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="Base762x26mmCaselessBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>86</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x26mmCaselessBullet">
+		<defName>Bullet_762x26mmCaseless_FMJ</defName>
+		<label>7.62mm Caseless bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetrationSharp>3</armorPenetrationSharp>
+			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x26mmCaselessBullet">
+		<defName>Bullet_762x26mmCaseless_AP</defName>
+		<label>7.62mm Caseless bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x26mmCaselessBullet">
+		<defName>Bullet_762x26mmCaseless_HP</defName>
+		<label>7.62mm Caseless bullet (HP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>2</armorPenetrationSharp>
+			<armorPenetrationBlunt>6.74</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_762x26mmCaseless_FMJ</defName>
+		<label>make 7.62mm Caseless (FMJ) cartridge x500</label>
+		<description>Craft 500 7.62mm Caseless (FMJ) cartridges.</description>
+		<jobString>Making 7.62mm Caseless (FMJ) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_762x26mmCaseless_FMJ>500</Ammo_762x26mmCaseless_FMJ>
+		</products>
+		<workAmount>1600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_762x26mmCaseless_AP</defName>
+		<label>make 7.62mm Caseless (AP) cartridge x500</label>
+		<description>Craft 500 7.62mm Caseless (AP) cartridges.</description>
+		<jobString>Making 7.62mm Caseless (AP) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_762x26mmCaseless_AP>500</Ammo_762x26mmCaseless_AP>
+		</products>
+		<workAmount>1920</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_762x26mmCaseless_HP</defName>
+		<label>make 7.62mm Caseless (HP) cartridge x500</label>
+		<description>Craft 500 7.62mm Caseless (HP) cartridges.</description>
+		<jobString>Making 7.62mm Caseless (HP) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_762x26mmCaseless_HP>500</Ammo_762x26mmCaseless_HP>
+		</products>
+		<workAmount>1600</workAmount>
+	</RecipeDef>
+
+</Defs>

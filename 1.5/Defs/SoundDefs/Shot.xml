@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SoundDef>
+		<defName>Shot_HFPSeven</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Shot/Shot_FN57</clipPath>
+				</li>
+			</grains>
+			<pitchRange>1.091765~1</pitchRange>
+			<sustainLoop>False</sustainLoop>
+		</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>Shot_HFTwo</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Shot/Light_Suppressed</clipPath>
+				</li>
+			</grains>
+			<pitchRange>1.091765~1</pitchRange>
+			<sustainLoop>False</sustainLoop>
+		</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

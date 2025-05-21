@@ -3,10 +3,14 @@
 	<name>HF Weapon Series</name>
 	<author>Safairette</author>
 	<supportedVersions>
-			<li>1.4</li>
+		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<packageId>Safair.HFWeaponPack</packageId>
-	<description>Adds 2 high-capacity experimental firearms, and their upgraded versions.\nCurrently depends on CE.</description>
+	<descriptionByVersion>
+		<v1.4>Adds 2 high-capacity experimental firearms, and their upgraded versions.\nCurrently depends on CE.</v1.4>
+		<v1.5>Adds 3 high-capacity experimental firearms, and their charged versions.\nCurrently depends on CE.</v1.5>
+	</descriptionByVersion>
 	<modDependencies>
 		<li>
 			<packageId>ceteam.combatextended</packageId>
