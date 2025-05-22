@@ -32,4 +32,20 @@
 		</li>
 		</subSounds>
 	</SoundDef>
+	<SoundDef>
+		<defName>Shot_HFSFiveFive</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Shot/Shot_ThermalSAW</clipPath>
+				</li>
+			</grains>
+			<pitchRange>1.091765~1</pitchRange>
+			<sustainLoop>False</sustainLoop>
+		</li>
+		</subSounds>
+	</SoundDef>
 </Defs>

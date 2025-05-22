@@ -4,6 +4,7 @@ using Verse;
 
 namespace HFWeaponSeries
 {
+    [StaticConstructorOnStartup]
     public class Gizmo_OverchargeStatus : Gizmo
     {
         public CompOvercharge comp;
@@ -27,32 +28,32 @@ namespace HFWeaponSeries
             innerTopRect.height = main.height / 2;
             Text.Font = GameFont.Tiny;
             Widgets.Label(innerTopRect,
-                "HF_OverchargeDamageStatus".Translate().Resolve() + ": " + comp.CurrentDamageMulti);
+                "HF_OverchargeDamageStatus".Translate().Resolve() + ": " + comp.CurrentDamageMulti.ToStringPercent());
             Rect barRect = innerMain;
             barRect.yMin = innerMain.y + innerMain.height / 2;
             Texture2D barColor = null;
             switch (comp.CurrentHeatPercentage)
             {
-                case < 0.5f:
+                case < 0.35f:
                     barColor = BaseShieldTex;
                     break;
-                case < 0.65f:
+                case < 0.55f:
                     barColor = WarmShieldTex;
                     break;
-                case < 0.80f:
+                case < 0.70f:
                     barColor = HotShieldTex;
                     break;
-                case < 0.95f:
+                case < 0.85f:
                     barColor = ExtremeShieldTex;
                     break;
-                case > 0.95f:
+                case > 0.85f:
                     barColor = MaxShieldTex;
                     break;
             }
             Widgets.FillableBar(barRect, comp.CurrentHeatPercentage, barColor, EmptyShieldBarTex, false);
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(barRect, comp.currentHeat + " / " + comp.Props.maxHeat);
+            Widgets.Label(barRect, comp.currentHeat.ToString("F1") + " / " + comp.Props.maxHeat);
             Text.Anchor = TextAnchor.UpperLeft;
             TooltipHandler.TipRegion(innerMain, "HF_OverchargeTooltip".Translate());
             return new GizmoResult(GizmoState.Clear);

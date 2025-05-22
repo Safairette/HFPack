@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using CombatExtended;
 using RimWorld;
 using Verse;
 using UnityEngine;
 
 namespace HFWeaponSeries
 {
-    public class CompOvercharge : ThingComp
+    public class CompOvercharge : CompRangedGizmoGiver
     {
         public float currentHeat;
         public int ticksToCooldown;

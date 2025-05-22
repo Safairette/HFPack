@@ -13,6 +13,6 @@ namespace HFWeaponSeries
         public float heatGainPerShot = 0.8f;
         public float maxHeat = 50f;
         public float cooldownRate = 0.2f;
-        public int ticksToCooldown = 4500;
+        public int ticksToCooldown = 450;
     }
 }

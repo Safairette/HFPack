@@ -48,8 +48,8 @@
         <Compile Include="CompOvercharge.cs" />
         <Compile Include="CompProperties_Overcharge.cs" />
         <Compile Include="Gizmo_OverchargeStatus.cs" />
-        <Compile Include="HarmonyInit.cs" />
-        <Compile Include="Harmony\PostDespawnPatch.cs" />
+        <Compile Include="Harmony\HarmonyInit.cs" />
+        <Compile Include="Harmony\PreDespawnPatch.cs" />
         <Compile Include="Harmony\SpawnSetupPatch.cs" />
         <Compile Include="OverchargeBulletCE.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>

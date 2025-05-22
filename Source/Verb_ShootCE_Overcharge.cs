@@ -19,9 +19,9 @@ public class Verb_ShootCE_Overcharge : Verb_ShootCE
         }
     }
 
-    public override void WarmupComplete()
+    protected override bool OnCastSuccessful()
     {
-        base.WarmupComplete();
         HeatComp?.TryAddHeat(HeatComp.Props.heatGainPerShot);
+        return base.OnCastSuccessful();
     }
 }

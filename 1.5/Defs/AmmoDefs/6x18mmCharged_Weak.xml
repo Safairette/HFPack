@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_6x18mmChargedHFWeak</defName>
+		<label>6x24mm Charged</label>
+		<ammoTypes>
+			<Ammo_6x18mmCharged>Bullet_6x18mmChargedHFWeak</Ammo_6x18mmCharged>
+			<Ammo_6x18mmCharged_AP>Bullet_6x18mmChargedHFWeak_AP</Ammo_6x18mmCharged_AP>
+			<Ammo_6x18mmCharged_Ion>Bullet_6x18mmChargedHFWeak_Ion</Ammo_6x18mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>AmmoSet_ChargedRifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+
+  <!--  Projectiles -->
+
+  <ThingDef ParentName="Base6x18mmChargedBullet">
+		<defName>Bullet_6x18mmChargedHFWeak</defName>
+		<label>6x18mm Charged bullet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>2</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>9</armorPenetrationSharp>
+			<armorPenetrationBlunt>11.4</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base6x18mmChargedBullet">
+		<defName>Bullet_6x18mmChargedHFWeak_AP</defName>
+		<label>6x18mm Charged bullet (Conc.)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>6</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>18</armorPenetrationSharp>
+			<armorPenetrationBlunt>11.4</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base6x18mmChargedBullet">
+		<defName>Bullet_6x18mmChargedHFWeak_Ion</defName>
+		<label>6x18mm Charged bullet (Ion)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>EMP</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>11.4</armorPenetrationBlunt>
+			<empShieldBreakChance>0.2</empShieldBreakChance>
+		</projectile>
+	</ThingDef>
+
+</Defs>

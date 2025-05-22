@@ -4,7 +4,7 @@ using Verse;
 namespace HFWeaponSeries;
 
 [HarmonyPatch(typeof(Pawn), nameof(Pawn.DeSpawn))]
-public class PostDespawnPatch
+public class PreDespawnPatch
 {
     public static void Prefix(Pawn __instance)
     {

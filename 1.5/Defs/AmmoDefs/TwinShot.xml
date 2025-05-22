@@ -70,15 +70,15 @@
     <defName>Bullet_6x18mmCharged_Twin</defName>
     <label>6x18mm Charged bullet</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageAmountBase>10</damageAmountBase>
+      <damageAmountBase>8</damageAmountBase>
       <secondaryDamage>
         <li>
           <def>Bomb_Secondary</def>
-          <amount>3</amount>
+          <amount>2</amount>
         </li>
       </secondaryDamage>
-      <armorPenetrationSharp>12</armorPenetrationSharp>
-      <armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+      <armorPenetrationSharp>11</armorPenetrationSharp>
+      <armorPenetrationBlunt>12.7</armorPenetrationBlunt>
 			<pelletCount>2</pelletCount>
     </projectile>
   </ThingDef>
@@ -87,15 +87,15 @@
     <defName>Bullet_6x18mmCharged_AP_Twin</defName>
     <label>6x18mm Charged bullet (Conc.)</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageAmountBase>8</damageAmountBase>
+      <damageAmountBase>7</damageAmountBase>
       <secondaryDamage>
         <li>
           <def>Bomb_Secondary</def>
           <amount>1</amount>
         </li>
       </secondaryDamage>
-      <armorPenetrationSharp>24</armorPenetrationSharp>
-      <armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+      <armorPenetrationSharp>22</armorPenetrationSharp>
+      <armorPenetrationBlunt>12.7</armorPenetrationBlunt>
 			<pelletCount>2</pelletCount>
     </projectile>
   </ThingDef>
@@ -104,15 +104,15 @@
     <defName>Bullet_6x18mmCharged_Ion_Twin</defName>
     <label>6x18mm Charged bullet (Ion)</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageAmountBase>8</damageAmountBase>
+      <damageAmountBase>7</damageAmountBase>
       <secondaryDamage>
         <li>
           <def>EMP</def>
-          <amount>5</amount>
+          <amount>3</amount>
         </li>
       </secondaryDamage>
-      <armorPenetrationSharp>18</armorPenetrationSharp>
-      <armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+      <armorPenetrationSharp>16</armorPenetrationSharp>
+      <armorPenetrationBlunt>12.7</armorPenetrationBlunt>
       <empShieldBreakChance>0.2</empShieldBreakChance>
 			<pelletCount>2</pelletCount>
     </projectile>
