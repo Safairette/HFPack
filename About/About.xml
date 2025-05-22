@@ -8,8 +8,10 @@
 	</supportedVersions>
 	<packageId>Safair.HFWeaponPack</packageId>
 	<descriptionsByVersion>
-		<v1.4>Adds 2 high-capacity experimental firearms, and their upgraded versions.\nCurrently depends on CE.</v1.4>
-		<v1.5>Adds 3 high-capacity experimental firearms, and their charged versions.\nCurrently depends on CE.</v1.5>
+		<v1.4>Adds 2 high-capacity experimental firearms, and their upgraded versions. 
+Currently depends on CE.</v1.4>
+		<v1.5>Adds 3 high-capacity experimental firearms, and their charged versions.
+Currently depends on CE.</v1.5>
 	</descriptionsByVersion>
 	<modDependencies>
 		<li>
